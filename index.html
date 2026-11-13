@@ -1,132 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Короткая презентация о бизонах: кто они, на что способны и как их удалось спасти.">
-    <title>Бизон — сила прерий</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Интерактивный лэпбук для 4 класса о бизонах: размеры, образ жизни, история спасения, игра и викторина." />
+    <title>Бизон Буффало 🦬 — Интерактивный лэпбук для 4 класса</title>
   </head>
   <body>
-    <main class="presentation" aria-label="Презентация о бизонах">
-      <header class="topbar">
-        <a class="brand" href="#slide-1" data-go="0" aria-label="На первый слайд">
-          <svg class="brand-mark" viewBox="0 0 48 34" aria-hidden="true">
-            <path d="M4 25.5c3-9.8 10.8-16.2 21.6-16.2 8.9 0 14.8 4 18.4 10.7-3.5-1.6-6.5-1.8-9.3-.7-2.6 1-4.8 3.1-6.2 6.1h-7.2l-2.2-5.2-2.3 5.2H9.2L4 25.5Z" fill="currentColor"/>
-            <path d="M27.8 9.8c1-3.4 3.2-5.4 6.6-6.1-.9 2.8-.7 5.1.7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
-          </svg>
-          <span>Дикая природа</span>
-        </a>
-
-        <div class="slide-counter" aria-live="polite">
-          <span id="currentSlide">01</span><i></i><span>03</span>
-        </div>
-      </header>
-
-      <div class="slides" id="slides">
-        <section class="slide slide-intro is-active" id="slide-1" aria-labelledby="title-1">
-          <div class="intro-copy">
-            <p class="eyebrow"><span>01</span> Знакомство</p>
-            <h1 id="title-1">Бизон<span class="title-dot">.</span></h1>
-            <p class="lead">Бизон — крупное травоядное млекопитающее из семейства полорогих. Его легко узнать по мощным плечам, большой голове и густой тёмной шерсти.</p>
-            <button class="text-link" type="button" data-next>
-              Узнать больше
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 7l5 5-5 5"/></svg>
-            </button>
-          </div>
-
-          <div class="intro-visual" aria-hidden="true">
-            <div class="sun-disc"></div>
-            <div class="image-frame">
-              <img src="assets/bison-prairie.jpg" alt="">
-            </div>
-            <p class="vertical-label">Bison bison · Северная Америка</p>
-          </div>
-
-          <p class="side-note">Сила<br>прерий</p>
-          <span class="giant-number" aria-hidden="true">01</span>
-        </section>
-
-        <section class="slide slide-facts" id="slide-2" aria-labelledby="title-2" inert>
-          <div class="facts-photo" aria-hidden="true">
-            <img src="assets/bison-prairie.jpg" alt="">
-            <span class="photo-caption">Американский бизон</span>
-          </div>
-
-          <div class="facts-copy">
-            <p class="eyebrow light"><span>02</span> Возможности</p>
-            <h2 id="title-2">Тяжёлый.<br><em>Но быстрый.</em></h2>
-            <p class="facts-intro">Несмотря на огромный размер, бизон двигается удивительно легко.</p>
-
-            <ul class="stat-list">
-              <li class="stat">
-                <p class="stat-value">900<span>кг</span></p>
-                <p class="stat-text">может весить взрослый самец — почти как небольшой автомобиль.</p>
-              </li>
-              <li class="stat">
-                <p class="stat-value">56<span>км/ч</span></p>
-                <p class="stat-text">развивает в беге — быстрее большинства людей.</p>
-              </li>
-            </ul>
-          </div>
-
-          <span class="giant-number" aria-hidden="true">02</span>
-        </section>
-
-        <section class="slide slide-story" id="slide-3" aria-labelledby="title-3" inert>
-          <div class="story-background" aria-hidden="true">
-            <img src="assets/bison-prairie.jpg" alt="">
-          </div>
-          <div class="story-shade" aria-hidden="true"></div>
-
-          <div class="story-copy">
-            <p class="eyebrow light"><span>03</span> История</p>
-            <h2 id="title-3">Второй<br><em>шанс.</em></h2>
-            <p class="story-text">К концу XIX века в дикой природе осталось лишь несколько сотен бизонов. Благодаря охране вид удалось спасти.</p>
-          </div>
-
-          <div class="timeline">
-            <div class="timeline-line" aria-hidden="true"><span></span></div>
-            <ul class="timeline-items">
-              <li class="timeline-item past">
-                <span class="timeline-dot"></span>
-                <strong>1800-е</strong>
-                <p>почти исчезли</p>
-              </li>
-              <li class="timeline-item now">
-                <span class="timeline-dot"></span>
-                <strong>Сегодня</strong>
-                <p>популяция восстанавливается</p>
-              </li>
-            </ul>
-          </div>
-
-          <button class="restart" type="button" data-go="0" aria-label="Начать презентацию сначала">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8V3m0 0h5M4 3l4.2 4.2a7 7 0 1 1-1.1 8.5"/></svg>
-            Сначала
-          </button>
-          <span class="giant-number" aria-hidden="true">03</span>
-        </section>
-      </div>
-
-      <nav class="slide-nav" aria-label="Навигация по слайдам">
-        <button class="nav-arrow nav-prev" type="button" aria-label="Предыдущий слайд" disabled>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
-        </button>
-        <div class="nav-dots" role="tablist" aria-label="Выбор слайда">
-          <button class="dot is-active" type="button" data-go="0" role="tab" aria-selected="true" aria-label="Слайд 1"></button>
-          <button class="dot" type="button" data-go="1" role="tab" aria-selected="false" aria-label="Слайд 2"></button>
-          <button class="dot" type="button" data-go="2" role="tab" aria-selected="false" aria-label="Слайд 3"></button>
-        </div>
-        <button class="nav-arrow nav-next" type="button" aria-label="Следующий слайд">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
-        </button>
-      </nav>
-
-      <div class="keyboard-hint" aria-hidden="true">
-        <span>←</span><span>→</span> листайте
-      </div>
-    </main>
-    <script src="script.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
