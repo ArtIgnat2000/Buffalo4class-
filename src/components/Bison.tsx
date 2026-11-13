@@ -12,10 +12,16 @@ export function WalkingBison({ className = '', scale = 1 }: { className?: string
             <circle cx="37" cy="108" r="6" fill="#1f1208"/>
           </g>
 
-          {/* Back legs */}
-          <g className="animate-leg-back" style={{ transformOrigin: '135px 85px' }}>
-            <rect x="128" y="85" width="16" height="45" rx="6" fill="#3d2512" stroke="#1f1208" strokeWidth="2"/>
-            <ellipse cx="136" cy="132" rx="11" ry="5" fill="#1f1208"/>
+          {/* Far-side legs sit behind the body, with shaded fur and higher hooves.
+              Each far leg moves with the opposite-side near leg (diagonal gait).
+              The 32px spacing and small stride keep all four hooves readable. */}
+          <g data-bison-leg="far-hind" className="animate-leg-front" style={{ transformOrigin: '78px 82px' }}>
+            <rect x="70" y="82" width="16" height="41" rx="6" fill="#51321b" stroke="#1f1208" strokeWidth="2"/>
+            <ellipse cx="78" cy="124" rx="8" ry="4" fill="#1f1208"/>
+          </g>
+          <g data-bison-leg="far-fore" className="animate-leg-back" style={{ transformOrigin: '142px 82px' }}>
+            <rect x="134" y="82" width="16" height="41" rx="6" fill="#51321b" stroke="#1f1208" strokeWidth="2"/>
+            <ellipse cx="142" cy="124" rx="8" ry="4" fill="#1f1208"/>
           </g>
 
           {/* Body */}
@@ -28,10 +34,14 @@ export function WalkingBison({ className = '', scale = 1 }: { className?: string
           <path d="M110 45 Q120 40 135 43" stroke="#1f1208" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
           <path d="M85 70 Q100 66 120 72" stroke="#3d2512" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
 
-          {/* Front legs */}
-          <g className="animate-leg-front" style={{ transformOrigin: '165px 85px' }}>
-            <rect x="158" y="85" width="17" height="45" rx="6" fill="#3d2512" stroke="#1f1208" strokeWidth="2"/>
-            <ellipse cx="166" cy="132" rx="11" ry="5" fill="#1f1208"/>
+          {/* Near-side hind and fore legs, in front of the body. */}
+          <g data-bison-leg="near-hind" className="animate-leg-back" style={{ transformOrigin: '110px 85px' }}>
+            <rect x="102" y="85" width="16" height="45" rx="6" fill="#3d2512" stroke="#1f1208" strokeWidth="2"/>
+            <ellipse cx="110" cy="132" rx="10" ry="5" fill="#1f1208"/>
+          </g>
+          <g data-bison-leg="near-fore" className="animate-leg-front" style={{ transformOrigin: '174px 85px' }}>
+            <rect x="166" y="85" width="17" height="45" rx="6" fill="#3d2512" stroke="#1f1208" strokeWidth="2"/>
+            <ellipse cx="174" cy="132" rx="10" ry="5" fill="#1f1208"/>
           </g>
 
           {/* Neck */}

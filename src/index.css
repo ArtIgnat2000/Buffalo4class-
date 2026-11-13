@@ -34,15 +34,15 @@ body {
 }
 @keyframes bob {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  50% { transform: translateY(-3px); }
 }
 @keyframes legFront {
-  0%, 100% { transform: rotate(-20deg); }
-  50% { transform: rotate(25deg); }
+  0%, 100% { transform: rotate(-8deg); }
+  50% { transform: rotate(8deg); }
 }
 @keyframes legBack {
-  0%, 100% { transform: rotate(25deg); }
-  50% { transform: rotate(-20deg); }
+  0%, 100% { transform: rotate(8deg); }
+  50% { transform: rotate(-8deg); }
 }
 @keyframes tailWag {
   0%, 100% { transform: rotate(-10deg); }
@@ -108,8 +108,9 @@ body {
 
 .animate-walk { animation: walkRight 22s linear infinite; }
 .animate-bob { animation: bob 0.6s ease-in-out infinite; }
-.animate-leg-front { animation: legFront 0.6s ease-in-out infinite; transform-origin: top center; }
-.animate-leg-back { animation: legBack 0.6s ease-in-out infinite; transform-origin: top center; }
+/* Joint coordinates are set on each SVG leg; resolve them against its viewBox. */
+.animate-leg-front { animation: legFront 0.6s ease-in-out infinite; transform-box: view-box; }
+.animate-leg-back { animation: legBack 0.6s ease-in-out infinite; transform-box: view-box; }
 .animate-tail { animation: tailWag 1.2s ease-in-out infinite; transform-origin: left center; }
 .animate-grass { animation: grassSway 3s ease-in-out infinite; transform-origin: bottom center; }
 .animate-cloud { animation: cloudDrift 40s linear infinite; }
